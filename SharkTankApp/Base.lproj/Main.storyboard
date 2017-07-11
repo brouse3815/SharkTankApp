@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SharkTankApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shark_Tank_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="zut-Aj-c4V">
+                                <rect key="frame" x="0.0" y="20" width="375" height="127"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d97-dk-48h">
+                                <rect key="frame" x="0.0" y="155" width="375" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="O14-2I-reS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="ENTER INVESTMENT AMOUNT" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ImG-mZ-ML4">
+                                <rect key="frame" x="0.0" y="218" width="375" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Y0z-gX-iPK"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="ENTER % EQUITY OFFERED" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zFZ-8F-5BU">
+                                <rect key="frame" x="0.0" y="282" width="375" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="lHT-Yf-qsY"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7L-nD-yrm">
+                                <rect key="frame" x="115" y="379" width="144" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="KEB-lL-hop"/>
+                                </constraints>
+                                <state key="normal" title="Evaluate"/>
+                                <connections>
+                                    <action selector="Eval:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZzS-Of-wFl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="d97-dk-48h" firstAttribute="leading" secondItem="ImG-mZ-ML4" secondAttribute="leading" id="45x-fG-a0o"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k7L-nD-yrm" secondAttribute="bottom" constant="225" id="Bsc-qZ-n5v"/>
+                            <constraint firstItem="d97-dk-48h" firstAttribute="top" secondItem="zut-Aj-c4V" secondAttribute="bottom" constant="8" symbolic="YES" id="Bvc-uU-s5V"/>
+                            <constraint firstItem="zut-Aj-c4V" firstAttribute="trailing" secondItem="d97-dk-48h" secondAttribute="trailing" id="FkS-Dh-tnL"/>
+                            <constraint firstItem="k7L-nD-yrm" firstAttribute="top" secondItem="zFZ-8F-5BU" secondAttribute="bottom" constant="67" id="HUp-em-TYI"/>
+                            <constraint firstItem="zut-Aj-c4V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Lxd-Ow-qtL"/>
+                            <constraint firstItem="zFZ-8F-5BU" firstAttribute="centerX" secondItem="k7L-nD-yrm" secondAttribute="centerX" id="NpW-er-5a5"/>
+                            <constraint firstAttribute="trailing" secondItem="zut-Aj-c4V" secondAttribute="trailing" id="OjT-oj-Fcb"/>
+                            <constraint firstItem="ImG-mZ-ML4" firstAttribute="trailing" secondItem="zFZ-8F-5BU" secondAttribute="trailing" id="SY9-Sm-iWm"/>
+                            <constraint firstItem="ImG-mZ-ML4" firstAttribute="top" secondItem="d97-dk-48h" secondAttribute="bottom" constant="28" id="T7Y-fr-new"/>
+                            <constraint firstItem="d97-dk-48h" firstAttribute="trailing" secondItem="ImG-mZ-ML4" secondAttribute="trailing" id="WuM-HY-zPU"/>
+                            <constraint firstItem="zut-Aj-c4V" firstAttribute="leading" secondItem="d97-dk-48h" secondAttribute="leading" id="Zd8-6x-rku"/>
+                            <constraint firstItem="zut-Aj-c4V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bge-Ps-vFP"/>
+                            <constraint firstItem="zFZ-8F-5BU" firstAttribute="top" secondItem="ImG-mZ-ML4" secondAttribute="bottom" constant="34" id="dVM-49-27T"/>
+                            <constraint firstItem="ImG-mZ-ML4" firstAttribute="leading" secondItem="zFZ-8F-5BU" secondAttribute="leading" id="gUM-n7-Qpn"/>
+                            <constraint firstItem="k7L-nD-yrm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="99" id="mGE-dG-V3T"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="input1" destination="ImG-mZ-ML4" id="SmN-lN-QFb"/>
+                        <outlet property="input2" destination="zFZ-8F-5BU" id="JPq-vb-Zke"/>
+                        <outlet property="label" destination="d97-dk-48h" id="h9T-jp-e3w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="68" y="140"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Shark_Tank_Logo" width="350" height="263"/>
+    </resources>
+</document>
